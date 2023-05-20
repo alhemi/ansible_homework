@@ -1,0 +1,97 @@
+---
+group_list:
+  - group: mik_info
+  - group: mik_vili
+  - group: mik_kmern
+
+users:
+  - username: user1
+    groups: mik_info
+    pw: jelszo1
+  - username: user2
+    groups: mik_info
+    pw: jelszo2
+  - username: user3
+    groups: mik_info
+    pw: jelszo3
+  - username: user4
+    groups: mik_info
+    pw: jelszo4
+  - username: user5
+    groups: mik_info
+    pw: jelszo5
+  - username: user6
+    groups: mik_info
+    pw: jelszo6
+  - username: user7
+    groups: mik_info
+    pw: jelszo7
+  - username: user8
+    groups: mik_info
+    pw: jelszo8
+  - username: user9
+    groups: mik_info
+    pw: jelszo9
+  - username: user10
+    groups: mik_info
+    pw: jelszo10
+  - username: user11
+    groups: mik_vili
+    pw: jelszo11
+  - username: user12
+    groups: mik_vili
+    pw: jelszo12
+  - username: user13
+    groups: mik_vili
+    pw: jelszo13
+  - username: user14
+    groups: mik_vili
+    pw: jelszo14
+  - username: user15
+    groups: mik_vili
+    pw: jelszo15
+  - username: user16
+    groups: mik_vili
+    pw: jelszo16
+  - username: user17
+    groups: mik_vili
+    pw: jelszo17
+  - username: user18
+    groups: mik_vili
+    pw: jelszo18
+  - username: user19
+    groups: mik_vili
+    pw: jelszo19
+  - username: user20
+    groups: mik_vili
+    pw: jelszo20
+  - username: user21
+    groups: mik_kmern
+    pw: jelszo21
+  - username: user22
+    groups: mik_kmern
+    pw: jelszo22
+  - username: user23
+    groups: mik_kmern
+    pw: jelszo23
+  - username: user24
+    groups: mik_kmern
+    pw: jelszo24
+  - username: user25
+    groups: mik_kmern
+    pw: jelszo25
+  - username: user26
+    groups: mik_kmern
+    pw: jelszo26
+  - username: user27
+    groups: mik_kmern
+    pw: jelszo27
+  - username: user28
+    groups: mik_kmern
+    pw: jelszo28
+  - username: user29
+    groups: mik_kmern
+    pw: jelszo29
+  - username: user30
+    groups: mik_kmern
+    pw: jelszo30

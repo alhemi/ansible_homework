@@ -1,0 +1,15 @@
+---
+ - name: Creating a cache pool
+   hosts: localhost
+   connection: local
+   vars_files:
+     - vars/cache_vars.yml
+   roles:
+    - create_VG_role
+   tasks:
+     - name: Create LVM
+       community.general.lvol:
+         vg: "{{ VG_name }}"
+         lv: "{{ LVM_name }}"
+         size: "{{ LVM_size }}"
+         opts: "{{ LVM_type }}"

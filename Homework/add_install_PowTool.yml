@@ -1,0 +1,20 @@
+---
+ - name: Adding the Powertools repository
+   hosts: localhost
+   connection: local
+   vars_files:
+     - vars/repo_vars.yml
+   tasks:
+     - name: Add repository
+       ansible.builtin.yum_repository:
+         name: "AlmaLinux $releasever - PowerTools"
+         description: Epel
+         baseurl: "http://mirror.centos.org/centos/8-stream/PowerTools/x86_64/os/"
+         gpgcheck: yes
+         gpgkey: "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux"
+         
+     - name: Install Powertools
+       ansible.builtin.yum:
+         name: Powertools
+         state: present
+...

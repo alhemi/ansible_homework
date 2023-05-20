@@ -1,0 +1,21 @@
+---
+ - name: Mount Device to /data/ dir and add entry to fstab
+   hosts: localhost
+   connection: local
+   vars_files:
+     - vars/mount_vars.yml
+   tasks:
+     - name: Mount Device
+       block:
+         - name: Trying to mount the device
+           ansible.posix.mount:
+             path: "{{ where_to_mnt }}"
+             src: "{{ device }}"
+             boot: "{{ auto_boot }}"
+             fstype: "{{ file_sys_type }}"
+             state: mounted
+       rescue:
+         - name: Print when error happens
+           ansible.builtin.debug:
+             msg: 'The device variable may needs a little fine tuning'
+...

@@ -1,0 +1,27 @@
+---
+ - name: Create 30 user
+   hosts: localhost
+   connection: local
+   vars_files:
+     - vars/users_vars.yml
+   tasks:
+     - name: Add groups
+       ansible.builtin.group:
+         name: "{{ item['group'] }}"
+         state: present
+       loop: "{{ group_list }}"
+
+     - name: Create users
+       ansible.builtin.user:
+         name: "{{ item['username'] }}"
+         state: present
+         groups: "{{ item['groups'] }}"
+         password: "{{ item['pw'] | password_hash('sha512', 'saltysalt')  }}"
+       loop: "{{ users }}"
+       notify: pw_change
+         
+   handlers:
+     - name: Bind user to change password
+       shell: chage -d 0 "{{ item['username'] }}"    #alternatívája lenne az expires
+       loop: "{{ users }}"
+       listen: pw_change

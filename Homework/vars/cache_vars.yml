@@ -1,0 +1,5 @@
+---
+ - VG_name: vg_services
+ - LVM_name: lvcache
+ - LVM_size: 512m
+ - LVM_type: --type cache-pool

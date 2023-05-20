@@ -1,0 +1,5 @@
+---
+# vars file for create_VG_role
+VG_name: vg_services
+PV_dev: /dev/sda,/dev/sdb,/dev/sdbc,/dev/sdd
+VG_size: 1024
